@@ -52,10 +52,10 @@ void setup() {
 }
 
 void loop() {
-  ch1 = pulseIn(PWM_PIN1, HIGH);
-//  ch2 = pulseIn(PWM_PIN2, HIGH);
-//  ch3 = pulseIn(PWM_PIN3, HIGH);
-//  ch4 = pulseIn(PWM_PIN4, HIGH);  
+  ch1 = pulseIn(PWM_PIN1, HIGH, 10000);  //use timeout of 10,000 microseconds or 10 milliseconds 
+//  ch2 = pulseIn(PWM_PIN2, HIGH, 10000);
+//  ch3 = pulseIn(PWM_PIN3, HIGH, 10000);
+//  ch4 = pulseIn(PWM_PIN4, HIGH, 10000);  
   Serial.print("CH1 in ");
   Serial.println(ch1);  
   Serial.print("CH2 in ");
