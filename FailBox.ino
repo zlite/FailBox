@@ -76,11 +76,14 @@ void loop() {
   }
 
   if (ch1 > 1500) {
-    Serial.print("Driving motor at ");
-    Serial.println(motor_speed);
-    myMotor1->setSpeed(motor_speed); 
-    myMotor1->run(FORWARD);
-    delay(10);
+    for (int i = 1; i <= 255; i = i + 10) {
+      motor_speed = i;
+      Serial.print("Driving motor at ");
+      Serial.println(motor_speed);
+      myMotor1->setSpeed(motor_speed); 
+      myMotor1->run(FORWARD);
+      delay(1000);
+    }
   }
   else {
   myMotor1->run(RELEASE);
