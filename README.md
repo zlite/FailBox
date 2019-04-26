@@ -7,6 +7,7 @@ This can read up to four incoming RC channels and trigger up to four outputs. Ou
 It defaults to motors on all four ports. 
 
 / Select which 'port' M1, M2, M3 or M4. In this case, M1
+
 Adafruit_DCMotor *myMotor1 = AFMS.getMotor(1);
 Adafruit_DCMotor *myMotor2 = AFMS.getMotor(2);
 Adafruit_DCMotor *myMotor3 = AFMS.getMotor(3);
